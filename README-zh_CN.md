@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/maotoumao/vanilla-design">
+    <img width="160" src="./vanilla-design.svg">
+  </a>
+</p>
+
 <h1 align="center">Vanilla Design</h1>
 
 <div align="center">
