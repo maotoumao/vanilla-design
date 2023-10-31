@@ -51,3 +51,22 @@ await fs.writeFile(gPath("index.tsx"), `${importCode}
 
 export { ${exportModules.join(', ')} };
 `, 'utf-8')
+
+
+const buildScripts = `
+const esbuild = require('esbuild');
+const path = require('path');
+const fs = require('fs');
+
+esbuild.buildSync({
+    entryPoints: [path.resolve(__dirname, 'index.tsx')],
+    outdir: path.resolve(__dirname, '../dist'),
+    bundle: true,
+    minify: true
+})
+
+fs.copyFileSync(path.resolve(__dirname, 'index.css'), path.resolve(__dirname, '../dist/index.css'));
+fs.copyFileSync(path.resolve(__dirname, '../package.json'), path.resolve(__dirname, '../dist/package.json'))
+`
+
+await fs.writeFile(gPath("build.cjs"), buildScripts, "utf-8");
