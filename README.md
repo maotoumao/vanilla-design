@@ -72,7 +72,7 @@ As a high-performance component library, on-demand loading is an absolute must. 
 
 #### CSS On-demand Importing
 
-If your boss isn't checking the code size, you can completely skip importing styles:
+If your boss doesn't care about how much code you've written, you can completely skip importing styles:
 
 ```tsx
 import { Div } from "vanilla-design";
