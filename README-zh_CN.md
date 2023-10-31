@@ -120,3 +120,4 @@ eBay  Microsoft  Apple  Pinterest  PayPal  Reddit  Netflix  Stack Overflow ...
 - 💡 你看到有人又在造组件库的轮子时；
 - 💡 ……
 
+你也可以在 [这里](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element) 获取到关于 Vanilla Design 的更多信息。
