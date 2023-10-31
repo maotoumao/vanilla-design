@@ -11,7 +11,7 @@
 </div>
 
 
-## ✨ 简介
+## ✨ Introduction
 
 `Vanilla Design` is a super lightweight, ultra high-performance React UI library. [Vanilla Design Team](https://github.com/maotoumao)  places a great emphasis on code size and performance, drawing inspiration from the [nocode](https://github.com/kelseyhightower/nocode) philosophy, which has significantly boosted the security and maintainability of `Vanilla Design`. It's like they've added an extra layer of bulletproofing and polish to their creation! 
 
