@@ -25,7 +25,11 @@ await fs.mkdir(gPath('upperCase'), {
     recursive: true
 });
 
-(sourceFile.statements[0] as ts.InterfaceDeclaration).members.forEach(async (it: ts.PropertySignature) => {
+
+let importCode = '';
+let exportModules: string[] = [];
+
+await Promise.all((sourceFile.statements[0] as ts.InterfaceDeclaration).members.map(async (it: ts.PropertySignature) => {
     let compName = it.name.getText(sourceFile);
     compName = /^".*"$/.test(compName) ? compName.slice(1, -1): compName;
     const compProps = it.type.getText(sourceFile);
@@ -33,10 +37,17 @@ await fs.mkdir(gPath('upperCase'), {
     return <${compName} {...props}></${compName}>
 }`
     await fs.writeFile(gPath("lowerCase", `${compName}.tsx`), content, 'utf-8')
-    await fs.writeFile(gPath("upperCase", `${compName.replace(/^(.)/, it => it.toUpperCase())}.tsx`), content, 'utf-8')
-});
+    importCode += `import _${compName} from "./lowerCase/${compName}.tsx";\n`;
+    exportModules.push(`_${compName} as ${compName}`);
 
+    const upperCompName = compName.replace(/^(.)/, it => it.toUpperCase());
+    await fs.writeFile(gPath("upperCase", `${upperCompName}.tsx`), content, 'utf-8');
+    importCode += `import _${upperCompName} from "./upperCase/${upperCompName}.tsx"\n`;
+    exportModules.push(`_${upperCompName} as ${upperCompName}`);
+}));
 
-await fs.writeFile(gPath("index.css"), "", "utf-8")
+await fs.writeFile(gPath("index.css"), "", "utf-8");
+await fs.writeFile(gPath("index.tsx"), `${importCode}
 
-
+export { ${exportModules.join(', ')} };
+`, 'utf-8')
