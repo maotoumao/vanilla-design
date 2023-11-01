@@ -54,4 +54,5 @@ export { ${exportModules.join(', ')} };
 
 await fs.copyFile("package.json" ,gPath("package.json"));
 await fs.copyFile("README.md" ,gPath("README.md"));
+await fs.copyFile("vanilla-design.svg" ,gPath("vanilla-design.svg"));
 

@@ -1,6 +1,6 @@
 {
   "name": "vanilla-design",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A super lightweight, ultra high-performance React UI library.",
   "main": "index.js",
   "type": "module",
@@ -10,6 +10,10 @@
   "keywords": ["react", "typescript", "jsx", "vanilla-design", "ui-kit"],
   "author": "猫头猫 <lhx_xjtu@163.com>",
   "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maotoumao/vanilla-design.git"
+  },
   "devDependencies": {
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.32",
