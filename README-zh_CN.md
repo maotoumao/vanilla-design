@@ -10,6 +10,7 @@
   一个超轻量的、超高性能的 React 组件库。
 </div>
 
+[English](./README.md) | 中文
 
 ## ✨ 简介
 
@@ -108,13 +109,13 @@ function App(){
 
 ## ❤️ 谁在使用？
 
-尽管大多数公司都没有声明，但它们都使用了 Vanilla Design，或基于 Vanilla Design 定制化组件库：
+尽管大多数公司都没有声明，但它们都使用了 Vanilla Design，或基于 Vanilla Design 定制化组件库😉：
 
 ```
 Facebook  Google  YouTube  Yahoo  Wikipedia  Windows  Twitter  Amazon  LinkedIn  MSN
 eBay  Microsoft  Apple  Pinterest  PayPal  Reddit  Netflix  Stack Overflow ...
 ```
-这些公司通常会将 Vanilla Design 和 [Vanilla JS](http://vanilla-js.com/) 一起使用，从而大大提升开发效率。
+这些公司通常会将 Vanilla Design 和 [Vanilla JS](http://vanilla-js.com/) 一起使用，从而大大提升开发效率。🍦🚀
 
 
 ## 🕛 何时使用？

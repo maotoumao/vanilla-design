@@ -46,27 +46,12 @@ await Promise.all((sourceFile.statements[0] as ts.InterfaceDeclaration).members.
     exportModules.push(`_${upperCompName} as ${upperCompName}`);
 }));
 
-await fs.writeFile(gPath("index.css"), "", "utf-8");
+await fs.writeFile(gPath("styles.css"), "", "utf-8");
 await fs.writeFile(gPath("index.tsx"), `${importCode}
 
 export { ${exportModules.join(', ')} };
 `, 'utf-8')
 
+await fs.copyFile("package.json" ,gPath("package.json"));
+await fs.copyFile("README.md" ,gPath("README.md"));
 
-const buildScripts = `
-const esbuild = require('esbuild');
-const path = require('path');
-const fs = require('fs');
-
-esbuild.buildSync({
-    entryPoints: [path.resolve(__dirname, 'index.tsx')],
-    outdir: path.resolve(__dirname, '../dist'),
-    bundle: true,
-    minify: true
-})
-
-fs.copyFileSync(path.resolve(__dirname, 'index.css'), path.resolve(__dirname, '../dist/index.css'));
-fs.copyFileSync(path.resolve(__dirname, '../package.json'), path.resolve(__dirname, '../dist/package.json'))
-`
-
-await fs.writeFile(gPath("build.cjs"), buildScripts, "utf-8");

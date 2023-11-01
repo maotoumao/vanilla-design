@@ -10,6 +10,7 @@
   A super lightweight, ultra high-performance React UI library.
 </div>
 
+English | [中文](./README-zh_CN.md)
 
 ## ✨ Introduction
 
@@ -125,6 +126,4 @@ In many scenarios, using `Vanilla Design` is a fantastic choice:
 - 💡 When you see someone reinventing the wheel by creating yet another component library.
 - 💡 And the list goes on...
 
-Vanilla Design: Because it's not just a UI library; it's a lifestyle choice. 😎🚀
-
-You can also find more information about `Vanilla Design` right [here](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element). 📚🔍
+You can also find more information about `Vanilla Design` right [here](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element). 
