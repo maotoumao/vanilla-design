@@ -127,3 +127,6 @@ In many scenarios, using `Vanilla Design` is a fantastic choice:
 - 💡 And the list goes on...
 
 You can also find more information about `Vanilla Design` right [here](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element). 
+
+
+The [repository](https://github.com/maotoumao/vanilla-design) is open source based on the WTFPL protocol. Don't hesitate to use it in your next project!
